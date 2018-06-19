@@ -1,57 +1,42 @@
 import javax.swing.JOptionPane;
 
-public class Program1
+public class Program3
 {
 	public static void main(String[] args)
 	{
 		//STEP 1
 		String list = "", descending;
-		int copy, x = 1;
-		while(x < 11)
-		{
+		int copy
+		
+		for(int i = 1; i < 11 i++)
 			list += x+"\n";
-			x++;
-		}
 		JOptionPane.showMessageDialog(null, list);
+		
 		//STEP 2
 		list = "";
-		x = 1;
-		while(x < 11)
-		{
+		for(i = 1; i < 11; i++)
 			list += x+" ";
-			x++;
-		}
 		JOptionPane.showMessageDialog(null, list);
+		
 		//STEP 3
 		list = "";
-		x = 1;
 		int input = Integer.parseInt(JOptionPane.showInputDialog("Enter a number: ")) + 1;
-		while(x < input)
-		{
+		
+		for(i = 1; i < input; i++)
 			list += x+"\n";
-			x++;
-		}
 		JOptionPane.showMessageDialog(null, list);
-		// STEP 4
+		
+		//STEP 4
 		list = "";
-		x = 0;
 		input = Integer.parseInt(JOptionPane.showInputDialog("Enter a number: "));
 		copy = input;
-		
-		while(input > x)
-		{
+		for(i = 0; input > i; input--)
 			list += input+" ";
-			input--;
-		}
-		
 		list += "\n";
 		descending = list;
 		list = "";
-		while(x < copy)
-		{
+		for(; x < copy; copy--)
 			list += copy+"\n";
-			copy--;
-		}
 		JOptionPane.showMessageDialog(null, descending+list);
 	}
 }

@@ -1,25 +1,35 @@
 import javax.swing.JOptionPane;
 
-public class Program1
+public class Program2
 {
 	public static void main(String[] args)
 	{
 		//STEP 1
 		String list = "", descending;
 		int copy, x = 1;
-		while(x < 11)
+		int start = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to start at: "));
+		int end = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to end with: "));
+		int a = start;
+		int b = end;
+		if(a > b)
 		{
-			list += x+"\n";
-			x++;
+			System.out.println("Invalid input, program closing");
+			return 0;
+		}
+			
+		while(a < b)
+		{
+			list += a+"\n";
+			a++;
 		}
 		JOptionPane.showMessageDialog(null, list);
 		//STEP 2
 		list = "";
-		x = 1;
-		while(x < 11)
+		a = start;
+		while(a < b)
 		{
-			list += x+" ";
-			x++;
+			list += a+" ";
+			a++;
 		}
 		JOptionPane.showMessageDialog(null, list);
 		//STEP 3

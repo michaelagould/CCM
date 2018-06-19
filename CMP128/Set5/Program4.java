@@ -1,57 +1,54 @@
 import javax.swing.JOptionPane;
 
-public class Program1
+public class Program4
 {
 	public static void main(String[] args)
 	{
 		//STEP 1
 		String list = "", descending;
-		int copy, x = 1;
-		while(x < 11)
+		int copy;
+		int start = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to start at: "));
+		int end = Integer.parseInt(JOptionPane.showInputDialog("Enter a number to end with: "));
+		int a = start;
+		int b = end;
+		if(a > b)
 		{
-			list += x+"\n";
-			x++;
+			System.out.println("Invalid input, program closing");
+			return 0;
 		}
+		for(; a < b; a++)
+			list += a+"\n";
 		JOptionPane.showMessageDialog(null, list);
+		
 		//STEP 2
 		list = "";
-		x = 1;
-		while(x < 11)
-		{
-			list += x+" ";
-			x++;
-		}
+		a = start;
+		
+		for(; a < b; a++)
+			list += a+" ";
 		JOptionPane.showMessageDialog(null, list);
+		
 		//STEP 3
 		list = "";
 		x = 1;
 		int input = Integer.parseInt(JOptionPane.showInputDialog("Enter a number: ")) + 1;
-		while(x < input)
-		{
+		for(int x = 1; x < input; x++)
 			list += x+"\n";
-			x++;
-		}
 		JOptionPane.showMessageDialog(null, list);
+		
 		// STEP 4
 		list = "";
-		x = 0;
 		input = Integer.parseInt(JOptionPane.showInputDialog("Enter a number: "));
 		copy = input;
 		
-		while(input > x)
-		{
+		for(; input > x; input--)
 			list += input+" ";
-			input--;
-		}
-		
 		list += "\n";
 		descending = list;
 		list = "";
-		while(x < copy)
-		{
+		
+		for(; x < copy; copy--)
 			list += copy+"\n";
-			copy--;
-		}
 		JOptionPane.showMessageDialog(null, descending+list);
 	}
 }
